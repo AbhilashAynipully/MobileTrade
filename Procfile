@@ -1,1 +1,1 @@
-web : gunicorn mobiletrade.wsgi
+web: gunicorn mobiletrade.wsgi
