@@ -29,9 +29,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['mobiletrade-2f5fcc81b06c.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['mobiletrade-2f5fcc81b06c.herokuapp.com', os.environ.get("LOCAL_HOST_URL")]
 
 
 # Application definition
