@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mobiletrade.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['mobiletrade-2f5fcc81b06c.herokuapp.com', 'localhost']
 
 
 # Application definition
