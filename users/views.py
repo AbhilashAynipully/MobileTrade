@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+from django import forms
+
 
 # Create your views here.
 
@@ -28,3 +32,7 @@ def get_logout_page(request):
     logout(request)
     messages.success(request,("You have successfully logged out!"))
     return redirect('home')
+
+
+def get_register_page(request):
+    return render(request,'../templates/register.html')
