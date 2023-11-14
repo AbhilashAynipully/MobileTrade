@@ -7,8 +7,22 @@
     <div class="row">
         <div class="col-lg-8 col-sm-10 mx-auto my-5 p-5 shadow rounded-3 position-relative">
             <h2>{{ profile.user.username}}'s Profile</h2>
-            <img src="{% static '/images/user-placeholder.jpeg'%}" alt="">
-            <a class="btn btn-dark" href="#">Edit Profile</a>
+            <div class="position-absolute top-0 end-0">
+                <a class="btn btn-dark m-3" href="#">Edit Profile</a>
+            </div>
+            
+            <div><img src="{% static '/images/user-placeholder.jpeg'%}" alt=""></div>
+            
+            <h5>Name : {{ profile.user.first_name}} {{ profile.user.last_name}} </h5>
+            <h5>Email Id : {{ profile.user.email}}</h5>
+            <div class="m-3">
+                <a class="btn btn-outline-success m-3 " href="#">My Listings</a>
+                <a class="btn btn-outline-success m-3" href="#">My Favourites</a>
+            </div>
+            <div class="position-absolute bottom-0 end-0">
+                <a class="btn btn-outline-danger m-3" href="#">Delete Account</a>
+            </div>
+            
         </div>
     </div>
 </div>
