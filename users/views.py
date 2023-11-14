@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
+from .forms import RegistrationForm
 
 
 # Create your views here.
@@ -35,4 +36,17 @@ def get_logout_page(request):
 
 
 def get_register_page(request):
-    return render(request,'../templates/register.html')
+    if request.method == "POST":
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password1']
+            user = authenticate(username=username,password=password)
+            login(request, user)
+            messages.success(request,("Registration Successful!"))
+            return redirect('home')
+    else:
+        form = RegistrationForm()
+
+    return render(request,'../templates/register.html',{'form': form})
