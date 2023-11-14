@@ -5,9 +5,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
 from .forms import RegistrationForm
+from .models import Profile
 
-
-# Create your views here.
 
 def get_home_page(request):
     return render(request,'../templates/index.html')
@@ -50,3 +49,12 @@ def get_register_page(request):
         form = RegistrationForm()
 
     return render(request,'../templates/register.html',{'form': form})
+
+
+def get_user_profile(request, pk):
+    if request.user.is_authenticated:
+        profile = Profile.objects.get(user_id = pk)
+        return render(request,"profile.html",{"profile": profile})
+    else:
+        messages.success(request,("You must be logged in to view this page!"))
+        return redirect('login')
