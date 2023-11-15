@@ -58,3 +58,13 @@ def get_user_profile(request, pk):
     else:
         messages.success(request,("You must be logged in to view this page!"))
         return redirect('login')
+
+
+def delete_account(request):
+    if request.method == 'POST':
+        user = request.user
+        user.delete()
+
+        messages.success(request, 'Your Account was deleted successfully')
+        return redirect('home')
+    return render(request,'../templates/delete_account.html')
