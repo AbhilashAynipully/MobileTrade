@@ -8,7 +8,7 @@
         <div class="col-lg-8 col-sm-10 mx-auto my-5 p-5 shadow rounded-3 position-relative bg-body-tertiary">
             <h2>{{ profile.user.username}}'s Profile</h2>
             <div class="position-absolute top-0 end-0">
-                <a class="btn btn-dark m-3" href="#">Edit Profile</a>
+                <a class="btn btn-dark m-3" href="{% url 'profile-update'%}">Edit Profile</a>
             </div>
             
             <div class="m-5"><img class="shadow rounded-5" src="{% static '/images/user-placeholder.jpeg'%}" alt=""></div>
