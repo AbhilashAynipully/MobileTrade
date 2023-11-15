@@ -68,3 +68,8 @@ def delete_account(request):
         messages.success(request, 'Your Account was deleted successfully')
         return redirect('home')
     return render(request,'../templates/delete_account.html')
+
+
+def get_profile_update(request):
+
+    return render(request,'../templates/profile_update.html')
