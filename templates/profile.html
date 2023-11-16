@@ -11,7 +11,7 @@
                 <a class="btn btn-dark m-3" href="{% url 'profile-update'%}">Edit Profile</a>
             </div>
             
-            <div class="m-5"><img class="shadow rounded-5" src="{% static '/images/user-placeholder.jpeg'%}" alt=""></div>
+            <div class="m-5"><img class="shadow rounded-5" src="{{profile.user_picture}}" alt="Image of User"></div>
             
             <h5>Name : {{ profile.user.first_name}} {{ profile.user.last_name}} </h5>
             <h5>Email Id : {{ profile.user.email}}</h5>
