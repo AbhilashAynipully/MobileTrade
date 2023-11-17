@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
-from .forms import RegistrationForm
+from .forms import RegistrationForm,UserUpdateForm,ProfileUpdateForm
 from .models import Profile
 
 
@@ -70,6 +70,5 @@ def delete_account(request):
     return render(request,'../templates/delete_account.html')
 
 
-def get_profile_update(request):
 
-    return render(request,'../templates/profile_update.html')
+
