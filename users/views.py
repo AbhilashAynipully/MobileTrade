@@ -70,5 +70,30 @@ def delete_account(request):
     return render(request,'../templates/delete_account.html')
 
 
+def get_profile_update(request):
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            u_form = UserUpdateForm(request.POST, instance=request.user)
+            p_form = ProfileUpdateForm(request.POST, request.FILES,     instance=request.user.profile)
+            
+            if u_form.is_valid() and p_form.is_valid():
+                u_form.save()
+                p_form.save()
+                messages.success(request,("Your Profile has been updated !"))
+                return redirect('profile')
 
+        else:
+            u_form = UserUpdateForm(request.POST, instance=request.user)
+            p_form = ProfileUpdateForm(request.POST, request.FILES,     instance=request.user.profile)
+        
+        context = {
+            'u_form' : u_form,
+            'p_form' : p_form
+        }
+
+        return render(request,'../templates/profile_update.html', context)
+
+    else:
+        messages.success(request,("You must be logged in to view this page!"))
+        return redirect('login')
 
