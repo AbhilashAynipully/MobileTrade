@@ -80,7 +80,7 @@ def get_profile_update(request):
                 u_form.save()
                 p_form.save()
                 messages.success(request,("Your Profile has been updated !"))
-                return redirect('profile')
+                return redirect('home')
 
         else:
             u_form = UserUpdateForm(request.POST, instance=request.user)
