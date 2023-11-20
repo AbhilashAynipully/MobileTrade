@@ -19,7 +19,7 @@ class Mobile(models.Model):
     mobile_pic4 = ResizedImageField(upload_to='mobiles/', blank=True)
     
     def __str__(self):
-        return f'{self.brand} + {self.model}'
+        return f'{self.brand} {self.model}'
 
     @property
     def default_picture(self):
@@ -34,6 +34,6 @@ class Mobile(models.Model):
 
 
 class Favourite(models.Model):
-    seller = models.ForeignKey(User, on_delete=models.CASCADE)
-    mobile = models.ForeignKey(Mobile, on_delete=models.CASCADE)
-    added_time = models.DateTimeField(auto_now_add=True)
+    seller = models.ForeignKey(User, on_delete = models.CASCADE)
+    mobile = models.ForeignKey(Mobile, on_delete = models.CASCADE)
+    added_time = models.DateTimeField(auto_now_add = True)
