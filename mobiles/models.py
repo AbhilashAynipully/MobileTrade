@@ -33,3 +33,7 @@ class Mobile(models.Model):
         return url
 
 
+class Favourite(models.Model):
+    seller = models.ForeignKey(User, on_delete=models.CASCADE)
+    mobile = models.ForeignKey(Mobile, on_delete=models.CASCADE)
+    added_time = models.DateTimeField(auto_now_add=True)
