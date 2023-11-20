@@ -6,7 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django import forms
 from .forms import RegistrationForm,UserUpdateForm,ProfileUpdateForm
 from .models import Profile
-
+from mobiles.models import Mobile, Favourite
 
 def get_home_page(request):
     return render(request,'../templates/index.html')
