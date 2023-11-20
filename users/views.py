@@ -98,11 +98,11 @@ def get_profile_update(request):
         return redirect('login')
 
 
-def get_my_mobiles(request, pk):
+def get_my_mobiles(request):
     if request.user.is_authenticated:
-        return render(request,'../templates/my_mobiles.html', context)
+        return render(request,'../templates/my_mobiles.html')
 
 
-def get_my_favourites(request, pk):
+def get_my_favourites(request):
     if request.user.is_authenticated:
-        return render(request,'../templates/my_favourites.html', context)
+        return render(request,'../templates/my_favourites.html')

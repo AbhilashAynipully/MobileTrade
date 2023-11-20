@@ -16,8 +16,8 @@
             <h5>Name : {{ profile.user.first_name}} {{ profile.user.last_name}} </h5>
             <h5>Email Id : {{ profile.user.email}}</h5>
             <div class="m-3">
-                <a class="btn btn-outline-success m-3 " href="#">My Listings</a>
-                <a class="btn btn-outline-success m-3" href="#">My Favourites</a>
+                <a class="btn btn-outline-success m-3 " href="{% url 'my_mobiles'%}">My Listings</a>
+                <a class="btn btn-outline-success m-3" href="{% url 'my_favourites'%}">My Favourites</a>
             </div>
             <div class="position-absolute bottom-0 end-0">
                 <a class="btn btn-outline-danger m-3" href="{%url 'delete-account'%}">Delete Account</a>
