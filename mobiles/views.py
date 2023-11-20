@@ -7,7 +7,6 @@ from .tools import filter_mobiles
 
 def get_all_mobiles(request):
     mobiles = filter_mobiles(request)
-    mobiles, page_number =  pagination (request, mobiles)
 
     context = {
         'brand' : choices.BRANDS,
