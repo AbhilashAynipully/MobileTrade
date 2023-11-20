@@ -1,5 +1,36 @@
-{% extends 'base.html'%}
-{% load static %}
-{% block content %}
-<h1>My Mobiles</h1>
+{% extends 'base.html'%} {% load static %} {% block content %}
+
+<!-- My Mobiles -->
+
+<div class="container">
+  <div class="row">
+    <div
+      class="col-lg-8 col-sm-10 mx-auto my-5 p-5 shadow rounded-3 bg-body-tertiary"
+    >
+      <h2 class="text-center mb-5">{{ profile.user.username}}'s Mobiles</h2>
+
+      {% for mobile in mobiles %}
+      <div class="row justify-content-evenly">
+        <div class="col-xl-2 col-sm-4 col-8 m-4 text-center">
+          <div class="card border-dark border-2 rounded-4">
+            <h5 class="card-title mt-1">{{ mobile.model }}</h5>
+            <img
+              src="{{ mobile.mobile_pic1 }}"
+              class="card-img-top"
+              alt="Image of mobile phone"
+            />
+            <div class="card-body">
+              <p class="card-text">Price:{{mobile.price}}£</p>
+              <a href="#" class="btn btn-dark">View</a>
+              <a href="#" class="btn btn-dark">Edit</a>
+              <a href="#" class="btn btn-dark">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
 {% endblock content %}

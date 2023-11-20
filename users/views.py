@@ -97,12 +97,6 @@ def get_profile_update(request):
         messages.success(request,("You must be logged in to view this page!"))
         return redirect('login')
 
-
-def get_my_mobiles(request):
-    if request.user.is_authenticated:
-        return render(request,'../templates/my_mobiles.html')
-
-
 def get_my_favourites(request):
     if request.user.is_authenticated:
         return render(request,'../templates/my_favourites.html')
