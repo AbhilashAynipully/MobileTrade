@@ -106,3 +106,17 @@ def get_my_mobiles(request):
 def get_my_favourites(request):
     if request.user.is_authenticated:
         return render(request,'../templates/my_favourites.html')
+
+
+def get_my_mobiles(request):
+    if request.user.is_authenticated:
+        mobile = Mobile.objects.get(user_id = pk)
+        
+        context = {
+        'mobile': mobile
+        }
+        return render(request,'../templates/my_mobiles.html',context)
+    
+    else:
+        messages.success(request,("You must be logged in to view this page!"))
+        return redirect('login')
