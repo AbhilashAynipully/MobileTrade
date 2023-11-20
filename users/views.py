@@ -101,3 +101,8 @@ def get_profile_update(request):
 def get_my_mobiles(request, pk):
     if request.user.is_authenticated:
         return render(request,'../templates/my_mobiles.html', context)
+
+
+def get_my_favourites(request, pk):
+    if request.user.is_authenticated:
+        return render(request,'../templates/my_favourites.html', context)
