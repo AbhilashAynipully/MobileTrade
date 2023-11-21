@@ -69,3 +69,24 @@ def get_edit_mobiles(request, pk):
     else:
         messages.success(request,("You must be logged in to view this page!"))
         return redirect('login')
+
+
+def delete_favourites(request, pk):
+    if request.user.is_authenticated:
+        mobile = get_object_or_404(Mobile, pk=pk)
+        user = request.user
+
+        if request.method == 'POST':
+            favourite = get_object_or_404(
+                Favourite, seller=user, mobile=mobile)
+            if favourite:
+                favourite.delete()
+                messages.success(request, 'Removed from favourites')
+                return redirect('my-favourites')
+
+        return render(
+            request, '../templates/delete_favourites.html', {'mobile': mobile})
+    
+    else:
+        messages.success(request,("You must be logged in to view this page!"))
+        return redirect('login')
