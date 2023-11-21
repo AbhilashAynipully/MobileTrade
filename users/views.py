@@ -9,7 +9,8 @@ from .models import Profile
 from mobiles.models import Mobile, Favourite
 
 def get_home_page(request):
-    return render(request,'../templates/index.html')
+    mobiles = Mobile.objects.all().order_by('-added_time')
+    return render(request,'../templates/index.html',{'mobiles':mobiles})
 
 
 def get_login_page(request):
