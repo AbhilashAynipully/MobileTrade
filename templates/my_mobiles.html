@@ -23,7 +23,7 @@
               <p class="card-text">Price:{{mobile.price}}£</p>
               <a href="#" class="btn btn-dark">View</a>
               <a href="#" class="btn btn-dark">Edit</a>
-              <a href="#" class="btn btn-dark">Delete</a>
+              <a href="{% url 'delete-mobiles' mobile.pk%}" class="btn btn-dark">Delete</a>
             </div>
           </div>
         </div>
