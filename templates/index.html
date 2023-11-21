@@ -1,72 +1,45 @@
-{% extends 'base.html'%}
-{% load static %}
-{% block content %}
+{% extends 'base.html'%} {% load static %} {% block content %}
 
 <!-- Hero Image -->
 
 <div class="container vw-100 vh-80 text-center">
-
-<img class="w-100 h-100" src="{% static 'images/mobiles-hero.png'%}" alt="Image of mobile phones">
-<h2 id="cover-text" class="mb-3">Buy and Sell Mobiles</h2>
+  <img
+    class="w-100 h-100"
+    src="{% static 'images/mobiles-hero.png'%}"
+    alt="Image of mobile phones"
+  />
+  <h2 id="cover-text" class="mb-3">Buy and Sell Mobiles</h2>
 </div>
 
 <!-- New Additions -->
 
 <div id="new-additions" class="mt-5 p-1">
+  <h3 class="m-3 text-center">
+    Checkout New Additions <span class="badge text-bg-dark">New</span>
+  </h3>
 
-<h3 class="m-3 text-center">Checkout New Additions <span class="badge text-bg-dark">New</span></h3>
-
-<div class="row justify-content-evenly">
-
+  <div class="row justify-content-evenly">
+    {% for mobile in mobiles|slice:'4' %}
     <div class="col-xl-2 col-sm-4 col-8 m-4 text-center">
-    <div class="card border-dark border-2 rounded-4">
-        <h5 class="card-title mt-1">Mobile Name <span class="badge text-bg-dark">New</span></h5>
-        <img src="{% static 'images/mobile-placeholder.jpeg'%}" class="card-img-top" alt="Image of mobile phone">
+      <div class="card border-dark border-2 rounded-4">
+        <h5 class="card-title mt-1">
+          {{ mobile.model }} <span class="badge text-bg-dark">New</span>
+        </h5>
+        <img
+          src="{{ mobile.mobile_pic1 }}"
+          class="card-img-top"
+          alt="Image of mobile phone"
+        />
         <div class="card-body">
-          <p class="card-text">Price: 500£</p>
+          <p class="card-text">Price: {{mobile.price}}£</p>
           <a href="#" class="btn btn-dark">More Info</a>
         </div>
       </div>
     </div>
-
-    <div class="col-xl-2 col-sm-4 col-8 m-4 text-center">
-        <div class="card border-dark border-2 rounded-4">
-            <h5 class="card-title mt-1">Mobile Name <span class="badge text-bg-dark">New</span></h5>
-            <img src="{% static 'images/mobile-placeholder.jpeg'%}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Price: 500£</p>
-              <a href="#" class="btn btn-dark">More Info</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-2 col-sm-4 col-8 m-4 text-center">
-            <div class="card border-dark border-2 rounded-4">
-                <h5 class="card-title mt-1">Mobile Name <span class="badge text-bg-dark">New</span></h5>
-                <img src="{% static 'images/mobile-placeholder.jpeg'%}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Price: 500£</p>
-                  <a href="#" class="btn btn-dark">More Info</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-2 col-sm-4 col-8 m-4 text-center">
-                <div class="card border-dark border-2 rounded-4">
-                    <h5 class="card-title mt-1">Mobile Name <span class="badge text-bg-dark">New</span></h5>
-                    <img src="{% static 'images/mobile-placeholder.jpeg'%}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <p class="card-text">Price: 500£</p>
-                      <a href="#" class="btn btn-dark">More Info</a>
-                    </div>
-                  </div>
-                </div>
-
-
+    {% endfor %}
+  </div>
 </div>
 
-</div>
 <!-- Listing Page Link -->
-
 
 {% endblock content %}
