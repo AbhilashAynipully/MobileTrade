@@ -9,7 +9,7 @@
       <p class="text-danger mb-5">Note : This action cannot be undone.</p>
       <form
         method="POST"
-        action="{% url 'delete-favourites' %}"
+        action="{% url 'delete-favourites' favourite.mobile.id %}"
         class="mt-3 mb-4"
       >
         {% csrf_token %}
