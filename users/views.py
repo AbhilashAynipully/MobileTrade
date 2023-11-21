@@ -98,21 +98,21 @@ def get_profile_update(request):
         return redirect('login')
 
 
-def get_my_favourites(request):
-    if request.user.is_authenticated:
-    favourites = Favourite.objects.filter(seller=request.user).order_by('-created')
-    return render(request, '../templates/my_favourites.html', {'favourites':favourites})
-
-    else:
-        messages.success(request,("You must be logged in to view this page!"))
-        return redirect('login')
-
-
 def get_my_mobiles(request):
     if request.user.is_authenticated:
         mobiles = Mobile.objects.filter(seller=request.user)
         return render(request,'../templates/my_mobiles.html',{'mobiles': mobiles})
     
+    else:
+        messages.success(request,("You must be logged in to view this page!"))
+        return redirect('login')
+
+
+def get_my_favourites(request):
+    if request.user.is_authenticated:
+        favourites = Favourite.objects.filter(seller=request.user)
+        return render(request, '../templates/my_favourites.html', {'favourites':favourites})
+
     else:
         messages.success(request,("You must be logged in to view this page!"))
         return redirect('login')
