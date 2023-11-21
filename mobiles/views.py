@@ -38,11 +38,14 @@ def get_add_mobiles(request):
 def get_delete_mobiles(request, pk):
     if request.user.is_authenticated:
         mobile = get_object_or_404(Mobile, pk=pk)
+            
+        if request.method == 'POST':
+            mobile.delete()
+            messages.success(request, 'Your mobile records were deleted successfully')
+            return redirect('home')
+        
+        return render(request, '../templates/delete_mobiles.html',{'mobile': mobile})
     
-
-    if request.method == 'POST':
-        mobile.delete()
-        messages.success(request, 'You mobile records were deleted successfully')
-        return redirect('profile',request.user)
-
-    return render(request, '../templates/delete_mobiles.html',{'mobile': mobile})
+    else:
+        messages.success(request,("You must be logged in to view this page!"))
+        return redirect('login')
