@@ -61,7 +61,7 @@ def get_edit_mobiles(request, pk):
             if form.is_valid():
                 mobile = form.save()
                 messages.success(request, 'Your mobile details were updated successfully.')
-                return redirect('my-mobiles')
+                return redirect('home')
             else:
                 messages.error(request, 'Sorry, details were not updated! Please try again.')
         return render(request, '../templates/edit_mobiles.html',{'form': form})
