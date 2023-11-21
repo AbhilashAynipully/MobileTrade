@@ -71,7 +71,7 @@ def get_edit_mobiles(request, pk):
         return redirect('login')
 
 
-def delete_favourites(request, pk):
+def get_delete_favourites(request, pk):
     if request.user.is_authenticated:
         mobile = get_object_or_404(Mobile, pk=pk)
         user = request.user
