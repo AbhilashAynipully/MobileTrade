@@ -33,3 +33,16 @@ def get_add_mobiles(request):
                 messages.error(request, 'Sorry your upload was unsuccessful! Please try again.')
         
         return render(request, '../templates/add_mobiles.html', {'form': form})
+
+
+def get_delete_mobiles(request, pk):
+    if request.user.is_authenticated:
+    mobile = get_object_or_404(Mobile, pk=pk)
+    
+
+    if request.method == 'POST':
+        mobile.delete()
+        messages.success(request, 'You mobile records were deleted successfully')
+        return redirect('profile',request.user)
+
+    return render(request, '../templates/delete_mobiles.html',{'mobile': mobile})
