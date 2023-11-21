@@ -49,3 +49,23 @@ def get_delete_mobiles(request, pk):
     else:
         messages.success(request,("You must be logged in to view this page!"))
         return redirect('login')
+
+
+def get_edit_mobiles(request, pk):
+    if request.user.is_authenticated:
+        mobile = get_object_or_404(Mobile, pk=pk)
+        form = MobileAdditionForm(instance=mobile)
+        
+        if request.method == 'POST':
+            form = MobileAdditionForm(request.POST, request.FILES, instance=mobile)
+            if form.is_valid():
+                mobile = form.save()
+                messages.success(request, 'Your mobile details were updated successfully.')
+                return redirect('my-mobiles')
+            else:
+                messages.error(request, 'Sorry, details were not updated! Please try again.')
+        return render(request, '../templates/edit_mobiles.html',{'form': form})
+
+    else:
+        messages.success(request,("You must be logged in to view this page!"))
+        return redirect('login')
