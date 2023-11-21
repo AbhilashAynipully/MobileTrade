@@ -75,17 +75,17 @@ def get_delete_favourites(request, pk):
     if request.user.is_authenticated:
         mobile = get_object_or_404(Mobile, pk=pk)
         user = request.user
-
-        if request.method == 'POST':
-            favourite = get_object_or_404(
+        favourite = get_object_or_404(
                 Favourite, seller=user, mobile=mobile)
+        if request.method == 'POST':
+
             if favourite:
                 favourite.delete()
                 messages.success(request, 'Removed from favourites')
-                return redirect('my-favourites')
+                return redirect('home')
 
         return render(
-            request, '../templates/delete_favourites.html', {'mobile': mobile})
+            request, '../templates/delete_favourites.html', {'favourite':favourite})
     
     else:
         messages.success(request,("You must be logged in to view this page!"))
