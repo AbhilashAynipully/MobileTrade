@@ -37,7 +37,7 @@ def get_add_mobiles(request):
 
 def get_delete_mobiles(request, pk):
     if request.user.is_authenticated:
-    mobile = get_object_or_404(Mobile, pk=pk)
+        mobile = get_object_or_404(Mobile, pk=pk)
     
 
     if request.method == 'POST':
