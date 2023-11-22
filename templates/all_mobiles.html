@@ -52,11 +52,13 @@
         <h5 class="card-title mt-1">
           {{ mobile.model }} <span class="badge text-bg-dark">New</span>
         </h5>
-        <img
-          src="{{ mobile.mobile_pic1 }}"
-          class="card-img-top"
-          alt="Image of mobile phone"
-        />
+        {% if mobile.mobile_pic1 %}
+<img
+src="{{ mobile.mobile_pic1.url }}"
+class="card-img-top"
+alt="Image of mobile phone"
+/>
+{% endif %}
         <div class="card-body">
           <p class="card-text">Price: {{mobile.price}}£</p>
           <a href="{% url 'mobile-details' mobile.pk %}" class="btn btn-dark">More Info</a>
