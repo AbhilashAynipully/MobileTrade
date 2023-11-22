@@ -28,7 +28,7 @@ class Mobile(models.Model):
         else:
             url = (
                 settings.STATIC_URL +
-                'images/mobile-placeholder.jpeg'
+                'images/mobiles/mobile-placeholder.jpeg'
             )
         return url
 
