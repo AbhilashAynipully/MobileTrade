@@ -14,11 +14,13 @@
         <div class="col-xl-2 col-sm-4 col-8 m-4 text-center">
           <div class="card border-dark border-2 rounded-4">
             <h5 class="card-title mt-1">{{ mobile.model }}</h5>
+            {% if mobile.mobile_pic1 %}
             <img
-              src="{{ mobile.mobile_pic1 }}"
-              class="card-img-top"
-              alt="Image of mobile phone"
+            src="{{ mobile.mobile_pic1.url }}"
+            class="card-img-top"
+            alt="Image of mobile phone"
             />
+            {% endif %}
             <div class="card-body">
               <p class="card-text">Price:{{mobile.price}}£</p>
               <a href="{% url 'mobile-details' mobile.pk %}" class="btn btn-dark">View</a>
