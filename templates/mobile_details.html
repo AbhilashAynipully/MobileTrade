@@ -3,5 +3,21 @@
 {% block content %}
 
 {{mobile.seller}}
-<img src="{{ mobile.mobile_pic1 }}" alt="">
+
+{% if request.user.id != mobile.seller.id %}
+<div class="row">
+    <div class="col-10">
+        <form method="POST" action="{% url 'toggle-favourites' mobile.pk %}">
+            {% csrf_token %}
+            {% if favourite %}
+            <button class="btn" type="submit" name="favourites" value="submit">  
+                Remove From Favourites</button>
+            {% else %}
+            <button class="btn" type="submit" name="favourites" value="submit">
+                Add To Favourites</button>
+            {% endif %}
+        </form>
+    </div>
+</div>
+{% endif %}
 {% endblock content%}

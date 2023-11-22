@@ -21,8 +21,8 @@
             />
             <div class="card-body">
               <p class="card-text">Price:{{favourite.mobile.price}}£</p>
-              <a href="{% url 'mobile-details' mobile.pk %}" class="btn btn-dark">View</a>
-              <a href="url 'delete-favourites' favourite.mobile.id" class="btn btn-dark">Remove</a>
+              <a href="{% url 'mobile-details' favourite.mobile.id %}" class="btn btn-dark">View</a>
+              <a href="{% url 'delete-favourites' favourite.mobile.id %}" class="btn btn-dark">Remove</a>
             </div>
           </div>
         </div>
