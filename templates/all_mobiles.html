@@ -1,5 +1,71 @@
-{% extends 'base.html'%}
-{% load static %}
-{% block content %}
-<h1>All Mobiles</h1>
+{% extends 'base.html'%} {% load static %} {% block content %}
+
+<!-- Search and All Mobiles -->
+
+<section class="search-section">
+
+    <div class="container text-center p-3 my-5" id="search-container">
+        <div class="row">
+            <h2>Lets find your dream phone</h2>
+        </div>
+
+        <form action="{% url 'all_mobiles' %}">
+            <div class="row">
+                <div class="col-md-3 mb-2">
+                    <label for="brand" class="sr-only">Brand</label>
+                    <select class="form-select" name="brand" id="brand">
+                        <option selected value="">Brands</option>
+                        {% for key,option in brand %}
+                        <option value="{{ key }}"
+                        {% if key == values.brand %}
+                        selected
+                        {% endif %}
+                        >{{ option }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-2">
+                    <label for="min_price" class="sr-only">Min Price:</label>
+                    <input class="form-control" name="min_price" id="min_price">
+                </div>
+
+                <div class="col-md-3 mb-2">
+                    <label for="min_price" class="sr-only">Max Price:</label>
+                    <input class="form-control" name="max_price" id="max_price">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-dark btn-lg mt-3">Search</button>
+        </form>
+    </div>
+</section>
+
+
+<section class="results my-5">
+    <div class="container text-center mt-5">
+        <h2>Search Results</h2>
+        <div class="row mt-5 justify-content-center">
+            {% for mobile in mobiles %}
+    <div class="col-xl-2 col-sm-4 col-8 m-4 text-center">
+      <div class="card border-dark border-2 rounded-4">
+        <h5 class="card-title mt-1">
+          {{ mobile.model }} <span class="badge text-bg-dark">New</span>
+        </h5>
+        <img
+          src="{{ mobile.mobile_pic1 }}"
+          class="card-img-top"
+          alt="Image of mobile phone"
+        />
+        <div class="card-body">
+          <p class="card-text">Price: {{mobile.price}}£</p>
+          <a href="#" class="btn btn-dark">More Info</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+        </div>
+    </div>
+
+</section>
 {% endblock content %}
