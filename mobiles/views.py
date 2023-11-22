@@ -71,6 +71,23 @@ def get_edit_mobiles(request, pk):
         return redirect('login')
 
 
+def get_mobile_details(request, pk):
+    mobile = Mobile.objects.get(pk=pk)
+    favourite = bool
+
+    if request.user.is_authenticated:
+        user = request.user
+        if Favourite.objects.filter(seller=user,
+                                    mobile=mobile).exists():
+            favourite = True
+
+    context = {
+        'mobile': mobile,
+        'favourite': favourite,
+    }
+    return render(request, '../templates/mobile_details.html', context)
+    
+
 def get_delete_favourites(request, pk):
     if request.user.is_authenticated:
         mobile = get_object_or_404(Mobile, pk=pk)
