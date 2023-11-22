@@ -7,4 +7,5 @@ urlpatterns = [
     path('delete-mobiles/<int:pk>/', views.get_delete_mobiles, name='delete-mobiles'),
     path('edit-mobiles/<int:pk>/', views.get_edit_mobiles, name='edit-mobiles'),
     path('delete-favourites/<int:pk>/', views.get_delete_favourites, name='delete-favourites'),
+    path('mobie/<int:pk>/', views.get_mobile_details, name='mobile-details'),
 ]
