@@ -32,7 +32,7 @@
         />
         <div class="card-body">
           <p class="card-text">Price: {{mobile.price}}£</p>
-          <a href="#" class="btn btn-dark">More Info</a>
+          <a href="{% url 'mobile-details' mobile.pk %}" class="btn btn-dark">More Info</a>
         </div>
       </div>
     </div>
