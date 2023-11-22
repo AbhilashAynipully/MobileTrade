@@ -86,7 +86,26 @@ def get_mobile_details(request, pk):
         'favourite': favourite,
     }
     return render(request, '../templates/mobile_details.html', context)
-    
+
+
+def toggle_favourites(request, pk):
+    if request.user.is_authenticated:
+        mobile = get_object_or_404(Mobile, pk=pk)
+        user = request.user
+        favourite, created = Favourite.objects.get_or_create(
+        seller=user, mobile=mobile)
+
+        if created:
+            messages.success(request, 'Added to Favourites!')
+        else:
+            favourite.delete()
+            messages.success(request, 'Removed from Favourites!')
+
+        return redirect('mobile-details', pk=pk)
+    else:
+        messages.success(request,("You must be logged in to add to favourites"))
+        return redirect('login')
+
 
 def get_delete_favourites(request, pk):
     if request.user.is_authenticated:
