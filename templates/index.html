@@ -24,8 +24,8 @@
 
   <div class="row justify-content-evenly">
     {% for mobile in mobiles|slice:'4' %}
-    <div class="col-xl-2 col-sm-4 col-8 m-4 text-center">
-      <div class="card border-dark border-2 rounded-4 p-2">
+    <div class="col-xl-2 col-sm-4 col-10 m-4 text-center">
+      <div class="card border-dark border-2 rounded-4 py-1 px-3">
         <h5 class="card-title mt-1"> {{ mobile.brand }}
           {{ mobile.model }} <span class="badge text-bg-dark">New</span>
         </h5>
