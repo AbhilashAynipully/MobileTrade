@@ -1,10 +1,10 @@
 {% extends 'base.html'%} {% load static %} {% block content %}
 
 <!-- Search and All Mobiles -->
-
+<!-- Search Section -->
 <section class="search-section text-center">
     <h2 class="my-5">Find Your Dream Phone</h2>
-    <div class="container text-center col-10 p-3 my-5 shadow rounded-5" id="search-container">
+    <div class="container text-center  col-sm-4 col-10 p-3 my-5 shadow rounded-5" id="search-container">
 
         <div class="text-center">
         <form id="search-form" action="{% url 'all_mobiles' %}">
@@ -30,7 +30,7 @@
     </div>
 </section>
 
-
+<!-- Results Section -->
 <section class="text-center mt-3 mx-3 p-3">
         <h2 class="mt-5">Results</h2>
         <div class="row mt-5 justify-content-center">
@@ -57,7 +57,7 @@
     </div>
 </section>
 
-<!-- Back To Search Section -->
+<!--Back To Top Search Section -->
 <div class="text-center my-5">
   <a href="#" class="btn btn-dark">Back To Search</a>
   </div>
