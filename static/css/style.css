@@ -24,3 +24,9 @@
     width : 100%;
     object-fit: contain;
 }
+
+#search-container{
+    background-color: rgb(228, 225, 225);
+}
+
+/* search form */
