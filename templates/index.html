@@ -1,4 +1,8 @@
-{% extends 'base.html'%} {% load static %} {% block content %}
+{% extends 'base.html'%} 
+{% load static %} 
+{% block content %}
+
+<!-- Home Page -->
 
 <!-- Hero Image -->
 
@@ -21,7 +25,7 @@
   <div class="row justify-content-evenly">
     {% for mobile in mobiles|slice:'4' %}
     <div class="col-xl-2 col-sm-4 col-8 m-4 text-center">
-      <div class="card border-dark border-2 rounded-4">
+      <div class="card border-dark border-2 rounded-4 p-2">
         <h5 class="card-title mt-1">
           {{ mobile.model }} <span class="badge text-bg-dark">New</span>
         </h5>
@@ -43,5 +47,7 @@
 </div>
 
 <!-- Listing Page Link -->
-
+<div class="text-center my-5">
+<a href="{% url 'all_mobiles' %}" class="btn btn-dark">Browse More Phones</a>
+</div>
 {% endblock content %}
