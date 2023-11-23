@@ -2,19 +2,19 @@
 {% load static %}
 {% block content %}
 
+<!-- Profile Page -->
+
+<div class="text-center my-3"><h2>{{ profile.user.username}}'s Profile</h2></div>
 {% if profile %}
-<div class="container  vw-100 vh-80 text-center">
+<div class="container   text-center">
     <div class="row">
-        <div class="col-lg-8 col-sm-10 mx-auto my-5 p-5 shadow rounded-3 position-relative bg-body-tertiary">
-            <h2>{{ profile.user.username}}'s Profile</h2>
+        <div class="col-lg-6 col-sm-10 mx-auto mb-5 p-5 shadow rounded-3 position-relative bg-body-tertiary">
             <div class="position-absolute top-0 end-0">
-                <a class="btn btn-dark m-3" href="{% url 'profile-update'%}">Edit Profile</a>
+                <a class="btn btn-dark mx-3 mt-3 rounded-pill" href="{% url 'profile-update'%}">Edit Profile</a>
             </div>
-            
-            <div class="m-5 profile-image-container"><img class="shadow rounded-5 profile-image" src="{{profile.user_picture}}" alt="Image of User"></div>
-            
-            <h5>Name : {{ profile.user.first_name}} {{ profile.user.last_name}} </h5>
-            <h5>Email Id : {{ profile.user.email}}</h5>
+            <div class="m-5 profile-image-container"><img class="shadow rounded-5 profile-image img-fluid" src="{{profile.user_picture}}" alt="Image of User"></div>
+            <h5>{{ profile.user.first_name}} {{ profile.user.last_name}} </h5>
+            <h5>{{ profile.user.email}}</h5>
             <div class="m-3">
                 <a class="btn btn-outline-success m-3 " href="{% url 'my_mobiles'%}">My Listings</a>
                 <a class="btn btn-outline-success m-3" href="{% url 'my_favourites'%}">My Favourites</a>
