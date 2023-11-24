@@ -1,3 +1,9 @@
+body {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
 #cover-text {
     font-size:300%;
     font-family: oswald,sans-serif;
@@ -30,3 +36,10 @@
 }
 
 /* search form */
+
+
+/* footer */
+
+#footer {
+    margin-top: auto;
+}
