@@ -8,7 +8,7 @@
 
         <div class="text-center">
         <form id="search-form" action="{% url 'all_mobiles' %}">
-                    <label for="brand" >Brand:</label>
+                    <label for="brand" ><strong>Brand:</strong></label>
                     <select class="form-select my-4" name="brand" id="brand">
                 
                         {% for key,option in brand %}
@@ -19,9 +19,9 @@
                         >{{ option }}</option>
                         {% endfor %}
                     </select>
-                    <label for="min_price" >Min Price:</label>
+                    <label for="min_price"><strong>Min Price (£):</strong></label>
                     <input class="form-control my-4" name="min_price" id="min_price">
-                    <label for="min_price">Max Price:</label>
+                    <label for="min_price"><strong>Max Price (£):</strong></label>
                     <input class="form-control my-4" name="max_price" id="max_price">
    
             <button type="submit" class="btn btn-dark btn-lg my-2">Search</button>
