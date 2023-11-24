@@ -1,7 +1,12 @@
-{% extends 'base.html'%} {% load static %} {% block content %}
-
-<div class="container vw-100 vh-90 text-center my-5">
-  <div class="row my-5">
+{% extends 'base.html'%} 
+{% load static %} 
+{% block content %}
+<!-- Delete Mobiles -->
+<div class="container text-center px-4">
+  <div class="row my-3">
+    <div class="mt-2 mb-2 d-flex justify-content-start">
+      <button class="btn rounded-pill btn-dark" onclick="history.back()">Go Back</button>
+    </div>
     <div
       class="col-sm-6 col-lg-4 mx-auto text-center my-5 p-4 shadow-container rounded-3 bg-danger-subtle"
     >
@@ -9,7 +14,6 @@
       <p class="text-danger mb-5">Note : This action cannot be undone.</p>
       <form method="POST" action="{% url 'delete-mobiles' mobile.pk %}" class="mt-3 mb-4">
         {% csrf_token %}
-        <a href="{% url 'home' %}" class="btn btn-dark">Cancel</a>
         <button type="submit" class="btn btn-danger text-white">
           Delete Mobile
         </button>
