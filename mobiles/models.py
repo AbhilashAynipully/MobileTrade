@@ -3,10 +3,12 @@ from django_resized import ResizedImageField
 from django.contrib.auth.models import User
 from django.conf import settings
 from users.models import Profile
+from .choices import BRANDS
+
 
 class Mobile(models.Model):
     seller = models.ForeignKey(User, on_delete=models.CASCADE)
-    brand = models.CharField(max_length=20)
+    brand = models.CharField(max_length=20, choices=BRANDS)
     model = models.CharField(max_length=20)
     colour = models.CharField(max_length=20, null=True, blank= True)
     memory = models.CharField(max_length=20, null=True, blank= True)
