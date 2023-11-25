@@ -10,7 +10,7 @@
 
 
 <div class="row justify-content-center p-4">
-<div class="row my-5  p-2 shadow rounded-5 bg-body-tertiary justify-content-evenly">
+<div class="row my-2  p-2 shadow rounded-5 bg-body-tertiary justify-content-evenly">
 
 <!-- Heading -->
 <h2 class="text-center mb-5">{{ mobile.brand }} {{ mobile.model }}</h2>
@@ -97,8 +97,8 @@
     </div>
 
 {% elif request.user.id == mobile.seller.id %}
-<div class="d-inline text-center">
-<a href="{% url 'edit-mobiles' mobile.pk%}" class="btn btn-dark m-1">Edit</a>
+<div class="d-inline text-center my-4">
+<a href="{% url 'edit-mobiles' mobile.pk%}" class="btn btn-dark m-1">Edit Mobile Details</a>
 </div>
 {% endif %}
 
