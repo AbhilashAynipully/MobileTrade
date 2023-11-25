@@ -3,16 +3,17 @@ from django.contrib.auth.forms import UserCreationForm
 from django import forms
 from .models import Profile
 
+
+# User registration form
 class RegistrationForm(UserCreationForm):
-    email = forms.EmailField(widget=forms.EmailInput(attrs={'class':'form-control'}))
-    first_name = forms.CharField(max_length=50,widget=forms.TextInput(attrs={'class':'form-control '}))
-    last_name = forms.CharField(max_length=50,widget=forms.TextInput(attrs={'class':'form-control '}))
+    email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control'}))
+    first_name = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class': 'form-control '}))
+    last_name = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class': 'form-control '}))
 
     class Meta:
         model = User
-        fields = ('username','first_name','last_name','email','password1','password2')
+        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2')
 
-    
     def __init__(self, *args, **kwargs):
         super(RegistrationForm, self).__init__(*args, *kwargs)
 
@@ -21,16 +22,19 @@ class RegistrationForm(UserCreationForm):
         self.fields['password2'].widget.attrs['class'] = 'form-control '
 
 
-class UserUpdateForm(forms.ModelForm) :
-    email = forms.EmailField(widget=forms.EmailInput(attrs={'class':'form-control'}))
-    first_name = forms.CharField(max_length=50,widget=forms.TextInput(attrs={'class':'form-control '}))
-    last_name = forms.CharField(max_length=50,widget=forms.TextInput(attrs={'class':'form-control '}))
+# User details update form
+class UserUpdateForm(forms.ModelForm):
+    email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control'}))
+    first_name = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class': 'form-control '}))
+    last_name = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class': 'form-control '}))
 
     class Meta:
         model = User
-        fields = ('username','first_name','last_name','email')
+        fields = ('username', 'first_name', 'last_name', 'email')
 
-class ProfileUpdateForm(forms.ModelForm) :
+
+# To update user profile picture
+class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['profile_picture']
