@@ -1,5 +1,6 @@
 from .models import Mobile
 
+
 def filter_mobiles(request):
     mobiles = Mobile.objects.all().order_by('-added_time')
 
@@ -17,5 +18,5 @@ def filter_mobiles(request):
         max_price = request.GET['max_price']
         if max_price:
             mobiles = mobiles.filter(price__lte=max_price)
-            
+
     return mobiles
