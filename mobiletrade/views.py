@@ -13,6 +13,7 @@ def handler404(request, exception):
 def handler500(request):
     return render(request, '500.html', status=500)
 
+
 # 403 Error
 def handler403(request, exception):
     if isinstance(exception, PermissionDenied):

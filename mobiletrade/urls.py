@@ -6,7 +6,7 @@ from .views import handler403, handler404, handler500
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('users.urls'),name='users_urls' ),
+    path('', include('users.urls'), name='users_urls'),
     path('mobiles/', include('mobiles.urls')),
 ]
 
