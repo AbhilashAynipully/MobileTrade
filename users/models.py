@@ -12,12 +12,6 @@ class Profile(models.Model):
     def __str__(self):
         return self.user.username
 
-    @property
-    def user_picture(self):
-        if self.profile_picture:
-            url = self.profile_picture.url
-        return url
-
 
 # Profile creation on new Signup
 def create_profile(sender, instance, created, **kwargs):
