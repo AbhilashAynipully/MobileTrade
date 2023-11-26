@@ -16,11 +16,6 @@ class Profile(models.Model):
     def user_picture(self):
         if self.profile_picture:
             url = self.profile_picture.url
-        else:
-            url = (
-                settings.STATIC_URL +
-                'images/users/user-placeholder.jpeg'
-            )
         return url
 
 
