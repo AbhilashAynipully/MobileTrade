@@ -13,10 +13,10 @@
                 <a class="btn btn-dark mx-3 mt-3 rounded-pill" href="{% url 'profile-update'%}">Edit Profile</a>
             </div>
             <div class="m-5 profile-image-container">
-                {% if profile.user_picture %}
-                <img class="shadow rounded-5 profile-image img-fluid" src="{{profile.user_picture}}" alt="Image of User">
+                {% if profile.profile_picture %}
+                <img class="shadow rounded-5 profile-image img-fluid" src="{{profile.profile_picture}}" alt="Image of User">
                 {% else %}
-                <img class="shadow rounded-5 profile-image img-fluid" src="{% static 'images/users/user-placeholder.jpeg'%}" alt="Image of mobile phones"/>
+                <img class="shadow rounded-5 profile-image img-fluid" src="{% static 'images/users/user-placeholder.jpeg'%}" alt="Default User Image"/>
                 {% endif %}
             </div>
             <h5>{{ profile.user.first_name}} {{ profile.user.last_name}} </h5>
