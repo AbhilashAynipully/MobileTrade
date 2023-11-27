@@ -23,9 +23,8 @@
 <img src="{{ mobile.mobile_pic1.url }}" class="card-img-top" alt="Image of mobile phone"/>
 </div>
 {% else%}
-<h5 class="mb-3">Sorry, No Images Available.</h5>
+<img src="{% static 'images/mobiles/mobile-placeholder.jpeg' %}" class="card-img-top" alt="default image of mobile"/>
 {% endif%}
-
 <div class="col-xl-2 col-md-3 col-sm-3 col-10 m-1">
 {% if mobile.mobile_pic2%}
 <img src="{{ mobile.mobile_pic2.url }}" class="card-img-top p-3" alt="Image of mobile phone"/>
@@ -49,10 +48,17 @@
 <hr>
 <h6 class="text-center"> <strong>Brand :</strong> <span class="text-primary">{{ mobile.brand }}</span></h6>
 <h6 class="text-center"><strong>Model :</strong> <span class="text-primary">{{ mobile.model }}</span></h6>
+{% if mobile.memory %}
 <h6 class="text-center"><strong>Memory :</strong> <span class="text-primary">{{ mobile.memory }} GB</span></h6>
+{% else %}
+<h6 class="text-center"><strong>Memory :</strong> <span class="text-primary">Not Available</span></h6>
+{% endif %}
+{% if mobile.colour %}
 <h6 class="text-center"><strong>Colour :</strong> <span class="text-primary">{{ mobile.colour }}</span> </h6>
+{% else %}
+<h6 class="text-center"><strong>Colour :</strong> <span class="text-primary">Not Available</span></h6>
+{% endif %}
 <h6 class="text-center"><strong>Price :</strong> <span class="text-primary">{{ mobile.price }}£</span></h6>
-<h6 class="text-center"><strong>Seller Comments :</strong> <span class="text-primary">{{ mobile.comments }}</span></h6>
 </div>
 
 <!-- Seller and Contact -->
@@ -61,7 +67,11 @@
 <hr>
 <h6 class="text-center"><strong>Seller :</strong> <span class="text-primary">{{ mobile.seller }}</span></h6>
 <h6 class="text-center"><strong>Listed On :</strong> <span class="text-primary">{{ mobile.added_time.date }}</span></h6>
+{% if mobile.comments %}
 <h6 class="text-center"><strong>Comments :</strong> <span class="text-primary">{{ mobile.comments }}</span></h6>  
+{% else %}
+<h6 class="text-center"><strong>Comments :</strong> <span class="text-primary">Not Available</span></h6> 
+{% endif %}
 
 {% if user.is_authenticated %}
     {% if request.user.id != mobile.seller.id %}
