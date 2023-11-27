@@ -20,6 +20,12 @@
             class="card-img-top"
             alt="Image of mobile phone"
             />
+            {% else %}
+            <img
+            src="{% static 'images/mobiles/mobile-placeholder.jpeg' %}"
+            class="card-img-top"
+            alt="Image of mobile phone"
+            />
             {% endif %}
             <div class="card-body">
               <p class="card-text">Price:{{favourite.mobile.price}}£</p>
