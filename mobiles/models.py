@@ -23,17 +23,6 @@ class Mobile(models.Model):
     def __str__(self):
         return f'{self.brand} {self.model}'
 
-    @property
-    def default_picture(self):
-        if self.mobile_pic1:
-            url = self.mobile_pic1.url
-        else:
-            url = (
-                settings.STATIC_URL +
-                'images/mobiles/mobile-placeholder.jpeg'
-            )
-        return url
-
 
 class Favourite(models.Model):
     seller = models.ForeignKey(User, on_delete=models.CASCADE)
