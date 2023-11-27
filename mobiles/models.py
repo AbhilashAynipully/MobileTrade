@@ -26,7 +26,7 @@ class Mobile(models.Model):
     @property
     def default_picture(self):
         if self.mobile_pic1:
-            url = self.mobile_pic_1.url
+            url = self.mobile_pic1.url
         else:
             url = (
                 settings.STATIC_URL +
