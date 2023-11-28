@@ -4,15 +4,20 @@ body {
     flex-direction: column;
 }
 
+
+/* Hero Section */
 #cover-text {
     font-size:300%;
     font-family: oswald,sans-serif;
     letter-spacing: 4px;
 }
 
+
+/* New Additions */
 #new-additions {
     background-color: rgba(63, 62, 62, 0.1);
 }
+
 
 /* card */
 .card-img-top {
@@ -20,26 +25,22 @@ body {
     height: 350px;
 }
 
-/* profile */
-.profile-image-container {
-  
-}
 
+/* profile */
 .profile-image {
     max-height :40%;
     width : 100%;
     object-fit: contain;
 }
 
+
+/* search form */
 #search-container{
     background-color: rgb(228, 225, 225);
 }
 
-/* search form */
-
 
 /* footer */
-
 #footer {
     margin-top: auto;
 }
