@@ -15,7 +15,15 @@
             <h2 class="text-center mb-5">Registration Form</h2>
             <form method="POST" action="{% url 'register' %}" class="mt-4">
                 {% csrf_token %}
-                {{form.as_p}}
+                {% for field in form.visible_fields %}
+                <div class="form-floating mb-4">
+                    {{ field }}
+                    <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                    {% for error in field.errors %}
+                    <span class="text-danger">{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% endfor %}
                 <div class="text-center">
                 <button type="submit" class="btn btn-lg btn-dark my-4">Register</button>
                     <p>Have an Account? <a href="{% url 'login' %}">Login Here</a></p>
