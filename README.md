@@ -487,11 +487,11 @@ Notification messages whenever the user performs actions like Log in, Log out, a
 
 - Custom template for error 403
 
-![Error 403](./assets/readme/features/)
+![Error 403](./assets/readme/features/error-403.jpeg)
 
 - Custom template for error 500
 
-![Error 500](./assets/readme/features/)
+![Error 500](./assets/readme/features/error-500.jpeg)
 
 
 
