@@ -17,78 +17,78 @@
 
 <!-- Images -->
 <div class="row border border-secondary my-3 p-4 rounded-5 shadow-lg justify-content-evenly">
-<h4 class="text-center mb-5"><strong>Mobile Images</strong></h4>
-<div class="col-xl-2 col-md-3 col-sm-3 col-10 m-1 text-center">
-{% if mobile.mobile_pic1%}
-<img src="{{ mobile.mobile_pic1.url }}" class="card-img-top" alt="Image of mobile phone"/>
-</div>
-{% else%}
-<img src="{% static 'images/mobiles/mobile-placeholder.jpeg' %}" class="card-img-top" alt="default image of mobile"/>
-{% endif%}
-<div class="col-xl-2 col-md-3 col-sm-3 col-10 m-1">
-{% if mobile.mobile_pic2%}
-<img src="{{ mobile.mobile_pic2.url }}" class="card-img-top p-3" alt="Image of mobile phone"/>
-{% endif%}
-</div>
-<div class="col-xl-2 col-md-3 col-sm-3 col-10 m-1">
-{% if mobile.mobile_pic3%}
-<img src="{{ mobile.mobile_pic3.url }}" class="card-img-top" alt="Image of mobile phone"/>
-{% endif%}
-</div>
-<div class="col-xl-2 col-md-3 col-sm-3 col-10 m-1">
-{% if mobile.mobile_pic4%}
-<img src="{{ mobile.mobile_pic4.url }}" class="card-img-top" alt="Image of mobile phone"/>
-{% endif%}
-</div>
-</div>
+    <h4 class="text-center mb-5"><strong>Mobile Images</strong></h4>
+               <div class="col-xl-2 col-md-3 col-sm-3 col-10 m-1 text-center">
+                {% if mobile.mobile_pic1%}
+                <img src="{{ mobile.mobile_pic1.url }}" class="card-img-top" alt="Image of mobile phone"/>
+                </div>
+                {% else%}
+                <img src="{% static 'images/mobiles/mobile-placeholder.jpeg' %}" class="card-img-top" alt="default image of mobile"/>
+                {% endif%}
+                <div class="col-xl-2 col-md-3 col-sm-3 col-10 m-1">
+                {% if mobile.mobile_pic2%}
+                <img src="{{ mobile.mobile_pic2.url }}" class="card-img-top p-3" alt="Image of mobile phone"/>
+                {% endif%}
+                </div>
+                <div class="col-xl-2 col-md-3 col-sm-3 col-10 m-1">
+                {% if mobile.mobile_pic3%}
+                <img src="{{ mobile.mobile_pic3.url }}" class="card-img-top" alt="Image of mobile phone"/>
+                {% endif%}
+                </div>
+                <div class="col-xl-2 col-md-3 col-sm-3 col-10 m-1">
+                {% if mobile.mobile_pic4%}
+                <img src="{{ mobile.mobile_pic4.url }}" class="card-img-top" alt="Image of mobile phone"/>
+                {% endif%}
+                </div>
+    </div>
 
 <!-- Mobile Description -->
 <div class="border border-secondary my-3 p-5 rounded-5 d-inline shadow-lg">
-<h4 class="text-center mt-1 mb-1"><strong>Mobile Details</strong></h4>
-<hr>
-<h6 class="text-center"> <strong>Brand :</strong> <span class="text-primary">{{ mobile.brand }}</span></h6>
-<h6 class="text-center"><strong>Model :</strong> <span class="text-primary">{{ mobile.model }}</span></h6>
-{% if mobile.memory %}
-<h6 class="text-center"><strong>Memory :</strong> <span class="text-primary">{{ mobile.memory }}</span></h6>
-{% else %}
-<h6 class="text-center"><strong>Memory :</strong> <span class="text-primary">Not Available</span></h6>
-{% endif %}
-{% if mobile.colour %}
-<h6 class="text-center"><strong>Colour :</strong> <span class="text-primary">{{ mobile.colour }}</span> </h6>
-{% else %}
-<h6 class="text-center"><strong>Colour :</strong> <span class="text-primary">Not Available</span></h6>
-{% endif %}
-<h6 class="text-center"><strong>Price :</strong> <span class="text-primary">{{ mobile.price }}£</span></h6>
+        <h4 class="text-center mt-1 mb-1"><strong>Mobile Details</strong></h4>
+        <hr>
+        <h6 class="text-center"> <strong>Brand :</strong> <span class="text-primary">{{ mobile.brand }}</span></h6>
+        <h6 class="text-center"><strong>Model :</strong> <span class="text-primary">{{ mobile.model }}</span></h6>
+        {% if mobile.memory %}
+        <h6 class="text-center"><strong>Memory :</strong> <span class="text-primary">{{ mobile.memory }}</span></h6>
+        {% else %}
+        <h6 class="text-center"><strong>Memory :</strong> <span class="text-primary">Not Available</span></h6>
+        {% endif %}
+        {% if mobile.colour %}
+        <h6 class="text-center"><strong>Colour :</strong> <span class="text-primary">{{ mobile.colour }}</span> </h6>
+        {% else %}
+        <h6 class="text-center"><strong>Colour :</strong> <span class="text-primary">Not Available</span></h6>
+        {% endif %}
+        <h6 class="text-center"><strong>Price :</strong> <span class="text-primary">{{ mobile.price }}£</span></h6>
 </div>
 
 <!-- Seller and Contact -->
 <div class="border border-secondary my-3 p-5 rounded-5 d-inline shadow-lg">
-<h4 class="text-center mt-1 mb-1"><strong>Seller Details</strong></h4>
-<hr>
-<h6 class="text-center"><strong>Seller :</strong> <span class="text-primary">{{ mobile.seller }}</span></h6>
-<h6 class="text-center"><strong>Listed On :</strong> <span class="text-primary">{{ mobile.added_time.date }}</span></h6>
-{% if mobile.comments %}
-<h6 class="text-center"><strong>Comments :</strong> <span class="text-primary">{{ mobile.comments }}</span></h6>  
-{% else %}
-<h6 class="text-center"><strong>Comments :</strong> <span class="text-primary">Not Available</span></h6> 
-{% endif %}
+            <h4 class="text-center mt-1 mb-1"><strong>Seller Details</strong></h4>
+            <hr>
+            <h6 class="text-center"><strong>Seller :</strong> <span class="text-primary">{{ mobile.seller }}</span></h6>
+            <h6 class="text-center"><strong>Listed On :</strong> <span class="text-primary">{{ mobile.added_time.date }}</span></h6>
+            {% if mobile.comments %}
+            <h6 class="text-center"><strong>Comments :</strong> <span class="text-primary">{{ mobile.comments }}</span></h6>  
+            {% else %}
+            <h6 class="text-center"><strong>Comments :</strong> <span class="text-primary">Not Available</span></h6> 
+            {% endif %}
 
-{% if user.is_authenticated %}
-    {% if request.user.id != mobile.seller.id %}
-    <div class="text-center my-4">
-    <a class="btn btn-dark" href="mailto:mobiletradedjango@gmail.com?subject={{mobile.seller}} : {{mobile.model}}&body=Hi please contact me.">Interested? Contact Us</a>
-</div>
-    {% else %}
-    <div class="text-center my-4">
-        <a href="{% url 'all_mobiles' %}" class="btn btn-dark">Browse More Phones</a>
-        </div>
-    {% endif %}
-{% else %}
-<div class="text-center my-4">
-    <a href="{% url 'login' %}" class="btn btn-dark">Interested, Sign In To Contact Us</a>
+            {% if user.is_authenticated %}
+            {% if request.user.id != mobile.seller.id %}
+             <div class="text-center my-4">
+                <a class="btn btn-dark" href="mailto:mobiletradedjango@gmail.com?subject={{mobile.seller}}-{{mobile.model}}">Interested? Contact Us</a>
+             </div>
+            {% else %}
+             <div class="text-center my-4">
+                    <a href="{% url 'all_mobiles' %}" class="btn btn-dark">Browse More Phones</a>
+             </div>
+            {% endif %}
+            {% else %}
+              <div class="text-center my-4">
+                <a href="{% url 'login' %}" class="btn btn-dark">Interested, Sign In To Contact Us</a>
+            </div>
+            {% endif %}
     </div>
-{% endif %}
-</div>
 
 <!-- Favourites Section -->
 {% if request.user.id != mobile.seller.id %}
