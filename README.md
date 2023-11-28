@@ -5,6 +5,7 @@
 <hr>
 Mobile Trade is a Full-stack E-Commerce website that allows its users to buy and sell mobile phones. This project is made using the Django framework and incorporates other technologies including HTML, CSS, Bootstrap and Javascript. The website enables its users to perform CRUD functionalities post-creation of their individual user accounts. This project is made as a part of Code Institute’s Full Stack Portfolio milestone project.
 
+
 ![mobiletrade Image](./assets/readme/mobile-trade-responsive.jpeg)
 
 # Table Of Content
@@ -72,7 +73,7 @@ Mobile Trade is a Full-stack E-Commerce website that allows its users to buy and
   - [Acknowledgments](#acknowledgments)
   - [Code](#code)
   - [Media](#media)
-  - [Conclusion and Summary](#conclusion and summary)
+  - [Conclusion and Summary](#conclusion-and-summary)
 
 ## User Experience
 
@@ -146,19 +147,33 @@ The project focuses on developing a responsive web app that would allow its user
 Wireframes were made with the help of Balsamiq.
 
 - Home
+
   ![Home](./assets/readme/wireframes/home.jpeg)
+
 - Profile
+
   ![profile](./assets/readme/wireframes/profile.jpeg)
+
 - Mobiles
+
   ![mobiles](./assets/readme/wireframes/mobiles.jpeg)
+
 - Mobile Details
+
   ![mobile-details](./assets/readme/wireframes/mobile-details.jpeg)
+
 - Log in
+
   ![login](./assets/readme/wireframes/login.jpeg)
+
 - My Listings
+
   ![my listings](./assets/readme/wireframes/my-listings.jpeg)
+
 - My Favourites
+
   ![my Favourites](./assets/readme/wireframes/my-favourites.jpeg)
+
 
 
 ### Database Schema
@@ -398,7 +413,7 @@ This page displays user's favourite mobiles in the form of cards which show Bran
 1. View (Redirects to mobile details page)
 2. Remove (Redirects to favourite deletion confirmation page)
 
-![My Favourites](./assets/readme/features/my-favourite.jpeg)
+![My Favourites](./assets/readme/features/my-favourites.jpeg)
 
 
 ### Delete Favourite Page
