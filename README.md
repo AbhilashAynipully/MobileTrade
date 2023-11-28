@@ -55,7 +55,7 @@ Mobile Trade is a Full-stack E-Commerce website that allows its users to buy and
   - [Register Page](#register-page)
   - [Password Reset Page](#password-reset-page)
   - [Password Reset Sent Page](#password-reset-sent-page)
-  - [Password Reset Confirm](#password-reset-confirm-page)
+  - [Password Reset Confirm](#password-reset-confirm)
   - [Password Reset Completed](#password-reset-completed)
   - [Error Pages](#error-pages)
 - [Future Features](#future-features)
