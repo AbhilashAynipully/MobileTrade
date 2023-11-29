@@ -280,6 +280,8 @@ Please find below details of all manual testing done to ensure proper functional
 
 ### HTML
 
+Please find below HTML validation report using W3C validator.
+
 |Page|Report|Status|
 |----|------|------|
 | Home |![home](./assets/testing/html/home.jpeg) | Pass |
@@ -296,16 +298,51 @@ Please find below details of all manual testing done to ensure proper functional
 | Profile Update|![profile-update](./assets/testing/html/profile-update.jpeg) | Pass |
 | Delete Account|![delete-account](./assets/testing/html/delete-account.jpeg) | Pass |
 | Delete Mobile|![delete-mobile](./assets/testing/html/delete-mobile.jpeg) | Pass |
-| Remove Favourite|![remove-favourite](./assets/testing/html/remove-favourite.jpeg) | Pass |
+| Remove Favourites|![remove-favourite](./assets/testing/html/remove-favourites.jpeg) | Pass |
 | Add Mobiles|![add-mobiles](./assets/testing/html/add-mobiles.jpeg) | Pass |
 | Mobile Details|![mobile-details](./assets/testing/html/mobile-details.jpeg) | Pass |
 | Edit Mobile|![edit-mobile](./assets/testing/html/edit-mobile.jpeg) | Pass |
 | Error 404|![error-404](./assets/testing/html/error-404.jpeg) | Pass |
 | Error 403|![error-403](./assets/testing/html/error-403.jpeg) | Pass |
 | Error 500|![error-500](./assets/testing/html/error-500) | Pass |
-| |![](./assets/testing/html/) | Pass |
-| |![](./assets/testing/html/) | Pass |
-| |![](./assets/testing/html/) | Pass |
-| |![](./assets/testing/html/) | Pass |
-| |![](./assets/testing/html/) | Pass |
-| |![](./assets/testing/html/) | Pass |
+
+### CSS
+
+Please find below stylesheet validation report using jigsaw.w3.org
+
+|Page|Report|Status|
+|----|------|------|
+|Stylesheet |![css](./assets/testing/css/css.jpeg) | Pass |
+
+
+### Python
+
+Please find below python code validation report using PEP8 Python Validator 
+
+#### mobiletrade (main project)
+|Page|Report|Status|
+|----|------|------|
+|url.py |![urls](./assets/testing/python/mobiletrade-urls.jpeg) | Pass |
+|views.py |![views](./assets/testing/python/mobiletrade-views.jpeg) | Pass |
+|settings.py |![settings](./assets/testing/python/settings.jpeg) | Pass |
+
+#### mobiles App
+|Page|Report|Status|
+|----|------|------|
+| views.py|![views](./assets/testing/python/mobiles-views.jpeg) | Pass |
+| admin.py|![admin](./assets/testing/python/mobiles-admin.jpeg) | Pass |
+| apps.py|![apps](./assets/testing/python/mobiles-apps.jpeg) | Pass |
+| choices.py|![choices](./assets/testing/python/mobiles-choices.jpeg) | Pass |
+| forms.py|![forms](./assets/testing/python/mobiles-forms.jpeg) | Pass |
+| models.py|![models](./assets/testing/python/mobiles-models.jpeg) | Pass |
+| tool.py|![tool](./assets/testing/python/mobiles-tool.jpeg) | Pass |
+| urls.py|![urls](./assets/testing/python/mobiles-urls.jpeg) | Pass |
+
+#### users App
+|Page|Report|Status|
+|----|------|------|
+| admin.py|![admin](./assets/testing/python/users-admin.jpeg) | Pass |
+| forms.py|![forms](./assets/testing/python/users-forms.jpeg) | Pass |
+| models.py|![models](./assets/testing/python/users-models.jpeg) | Pass |
+| urls.py|![url](./assets/testing/python/users-urls.jpeg) | Pass |
+| views.py|![views](./assets/testing/python/users-views.jpeg) | Pass |
