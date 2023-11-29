@@ -281,35 +281,20 @@ Please find below details of all manual testing done to ensure proper functional
 |User Story| Comments|
 |----------| --------|
 |1. As a Site User, I can visit the home page of the website,  so that i can know more about the purpose of the website.| All Acceptance criteria and tasks captured in Issues were met|
-
 |2. As a Site User, I want the website to be responsive,  so that I can view it on multiple devices of different resolutions.| All Acceptance criteria and tasks captured in Issues were met|
-
 |3. As a Site User, I can navigate through the website,  so that I can proceed to any section as per my preference.| All Acceptance criteria and tasks captured in Issues were met|
-
 |4. As an Unregistered Site User, I can SignUp/register on the website,  so that I can create a User Account.| All Acceptance criteria and tasks captured in Issues were met|
-
 |5. As a Registered User, I can login using my credentials,  so that I can access my user profile page and other functionalities.| All Acceptance criteria and tasks captured in Issues were met|
-
 |6. As a Logged in User, I can view my profile page,  so that I can access all available functionalities for a registered user.| All Acceptance criteria and tasks captured in Issues were met|
-
 |7. As a Registered User, I can delete my profile,  so that I can remove all my personal info including my listings and favourites from the website.| All Acceptance criteria and tasks captured in Issues were met|
-
 |8. As a Registered User, I can reset my profile password,  so that I can regain access to my user account if I forget my password.| All Acceptance criteria and tasks captured in Issues were met|
-
 |9. As a Registered User, I can manage my favourite listings,  so that I can Add to, View and Delete them from my favourites list.| All Acceptance criteria and tasks captured in Issues were met|
-
 |10. As a Registered User, I can manage my listings,  so that I can Add to and View products from My Listings.| All Acceptance criteria and tasks captured in Issues were met|
-
 |11. As a Registered User, I can manage my listings,  so that I can Update and Delete items from My Listings.| All Acceptance criteria and tasks captured in Issues were met|
-
 |12. As a Site User, I can see the recent mobile phone additions to website,  so that I know whats newly available.| All Acceptance criteria and tasks captured in Issues were met|
-
 |13. As a Site User, I can visit Listings Page,  so that I can see all the listed mobile phones on the website.| All Acceptance criteria and tasks captured in Issues were met|
-
 |14. As a Site User, I can search for a mobile phone based on Brand, Model, Maximum and Minimum Price,  so that I can find mobile phones as per my preferences.| All Acceptance criteria and tasks captured in Issues were met|
-
 |15. As a Site User, I can view/visit Product Details Page,  so that I can see all details of the product I am interested in.| All Acceptance criteria and tasks captured in Issues were met|
-
 |16. As a Registered Site User, I can email Mobile Trade regarding a listing, so that seller is contacted if I am interested in buying or for any other queries related to phone.| All Acceptance criteria and tasks captured in Issues were met|
 
 
