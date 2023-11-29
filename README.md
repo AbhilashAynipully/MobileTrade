@@ -462,7 +462,7 @@ Sample Email :
 
 Users are redirected to this page when they click on the link sent to them via Email. On this page, user is asked to enter the password twice and confirm.
 
-![Password Reset Confirm](./assets/readme/features/)
+![Password Reset Confirm](./assets/readme/features/password-reset-confirm.jpeg)
 
 
 ### Password Reset Complete
