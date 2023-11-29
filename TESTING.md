@@ -326,7 +326,7 @@ Please find below HTML validation report using W3C validator.
 | Edit Mobile|![edit-mobile](./assets/testing/html/edit-mobile.jpeg) | Pass |
 | Error 404|![error-404](./assets/testing/html/error-404.jpeg) | Pass |
 | Error 403|![error-403](./assets/testing/html/error-403.jpeg) | Pass |
-| Error 500|![error-500](./assets/testing/html/error-500) | Pass |
+| Error 500|![error-500](./assets/testing/html/error-500.jpeg) | Pass |
 
 ### CSS
 
