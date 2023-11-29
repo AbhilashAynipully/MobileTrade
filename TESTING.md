@@ -274,3 +274,38 @@ Please find below details of all manual testing done to ensure proper functional
 - Error 403 and Error 500 pages were tested using unauthenticated URL and invalid code. Custom Error pages are working.
 - Footer is present and functional.
 - All style elements are working properly
+
+
+## Code Validation
+
+### HTML
+
+|Page|Report|Status|
+|----|------|------|
+| Home |![home](./assets/testing/html/home.jpeg) | Pass |
+| Mobiles |![all-mobiles](./assets/testing/html/all-mobiles.jpeg) | Pass |
+| Login |![log-in](./assets/testing/html/log-in.jpeg) | Pass |
+| Profile |![profile](./assets/testing/html/profile.jpeg) | Pass |
+| Register |![register](./assets/testing/html/register.jpeg) | Pass |
+| Password Reset Form|![password-reset-form](./assets/testing/html/password-reset-form.jpeg) | Pass |
+| Password Mail Sent|![password-mail-sent](./assets/testing/html/password-mail-sent.jpeg) | Pass |
+| Password Confirm|![password-confirm](./assets/testing/html/password-confirm.jpeg) | Pass |
+| Password Reset Confirmation|![password-reset-confirmation](./assets/testing/html/password-reset-confirmation.jpeg) | Pass |
+| My Listings|![my-mobiles](./assets/testing/html/my-mobiles.jpeg) | Pass |
+| My Favourites|![my-favourites](./assets/testing/html/my-favourites.jpeg) | Pass |
+| Profile Update|![profile-update](./assets/testing/html/profile-update.jpeg) | Pass |
+| Delete Account|![delete-account](./assets/testing/html/delete-account.jpeg) | Pass |
+| Delete Mobile|![delete-mobile](./assets/testing/html/delete-mobile.jpeg) | Pass |
+| Remove Favourite|![remove-favourite](./assets/testing/html/remove-favourite.jpeg) | Pass |
+| Add Mobiles|![add-mobiles](./assets/testing/html/add-mobiles.jpeg) | Pass |
+| Mobile Details|![mobile-details](./assets/testing/html/mobile-details.jpeg) | Pass |
+| Edit Mobile|![edit-mobile](./assets/testing/html/edit-mobile.jpeg) | Pass |
+| Error 404|![error-404](./assets/testing/html/error-404.jpeg) | Pass |
+| Error 403|![error-403](./assets/testing/html/error-403.jpeg) | Pass |
+| Error 500|![error-500](./assets/testing/html/error-500) | Pass |
+| |![](./assets/testing/html/) | Pass |
+| |![](./assets/testing/html/) | Pass |
+| |![](./assets/testing/html/) | Pass |
+| |![](./assets/testing/html/) | Pass |
+| |![](./assets/testing/html/) | Pass |
+| |![](./assets/testing/html/) | Pass |
